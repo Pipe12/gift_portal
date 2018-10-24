@@ -1,24 +1,32 @@
-# README
+#  #100DaysOfCode
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**1/100** days of code
 
-Things you may want to cover:
+# Contexto del caso
 
-* Ruby version
+Portal de obsequios con dos tipos de usuario. Donde cada usuario tiene diferentes productos asignados.  
 
-* System dependencies
+# Requerimientos
 
-* Configuration
+1. Login de usuarios con roles Se deben realizar el login de dos tipos de usuarios en la aplicación, cuando ingrese deben mostrarse los productos asignados para ese rol.
 
-* Database creation
+2. Crud de productos Cada usuario debe poder agregar nuevos productos y eliminarlos.
 
-* Database initialization
+Campos mínimos para la creación de productos:
 
-* How to run the test suite
+ - ID
+ - Nombre
+ - Descripción
+ - Costo
 
-* Services (job queues, cache servers, search engines, etc.)
+Es de anotar que los productos deben estar organizados por categorías.
 
-* Deployment instructions
+- Manejo de html, css, javascript
 
-* ...
+ - Manejo de Ruby
+
+  - CRUD (adición y eliminación lógica)
+
+  - Implementación del código respectivo dentro de la aplicación
+
+  - Presentación y estética de la interfaz
