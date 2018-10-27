@@ -1,0 +1,26 @@
+<h1>Categorias de productos</h1>
+
+<%= link_to "Crear categoria", new_category_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.id %></td>
+        <td><%= category.name %></td>
+        <td><%= link_to 'Editar', edit_category_path(category) %></td>
+        <td><%= link_to 'Elimminar', category_path(category),
+                method: :delete,
+                data: { confirm: 'Esta seguro ?'} %></td>
+      </tr>
+    <%end %>
+  </tbody>
+</table>
