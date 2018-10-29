@@ -7,20 +7,8 @@ class ProductsController < ApplicationController
     @product = Product.new(products_params)
 
     if @product.save
-      puts 'Vamos bien'
       redirect_to products_path
     else
-      puts ''
-      puts ''
-      puts 'Something is wrong'
-      puts @product.valid?
-      puts ''
-      puts ''
-      @product.errors.full_messages.each do |message|
-        puts message
-      end
-      puts ''
-      puts ''
       render new_product_path
     end
   end
