@@ -1,4 +1,16 @@
 <h1>Crear categoria</h1>
+
+<% if @category.errors.any? %>
+  <div id="errors">
+    <h3>Se tienen <%= @category.errors.count %> error por favor corrigirlos</h3>
+    <ul>
+      <% @category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @category do |f| %>
   <p>
     <%= f.label "Categoria: " %>

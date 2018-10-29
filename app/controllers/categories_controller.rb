@@ -9,7 +9,9 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to root_path
     else
-      redirect_to new category_path
+      puts 'something is wrong'
+      puts @category.errors.full_messages
+      render new_category_path
     end
   end
 

@@ -2,9 +2,12 @@
 
 <% if @product.errors.any? %>
   <div id="errors">
-    <% @product.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
+    <h2>Se tienen <%= @product.errors.count %> error por favor corrigirlos</h2>
+    <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
   </div>
 <% end %>
 
