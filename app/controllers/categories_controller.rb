@@ -9,8 +9,6 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to root_path
     else
-      puts 'something is wrong'
-      puts @category.errors.full_messages
       render new_category_path
     end
   end
@@ -29,7 +27,7 @@ class CategoriesController < ApplicationController
     if @category.update(category_params)
       redirect_to categories_path
     else
-      redirect_to edit_category_path
+      render edit_category_path
     end
   end
 
