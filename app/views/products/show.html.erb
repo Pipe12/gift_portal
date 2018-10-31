@@ -1,26 +1,10 @@
-<h1>Producto</h1>
-
-<% if @product.errors.any? %>
-  <div id="errors">
-    <h2>Se tienen <%= @product.errors.count %> error por favor corrigirlos</h2>
-    <ul>
-      <% @product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
+<div class="box">
+  <div id="head2">
+    <span class="h2">Producto</span>
   </div>
-<% end %>
-
-<p>
-  <label>Nombre:</label>
-  <%= @product.name %>
-</p>
-<p>
-  <label>Descripción:</label>
-  <%= @product.description %>
-</p>
-<p>
-  <label>Valor:</label>
-  <%= @product.cost %>
-</p>
-<%= link_to 'Volver', products_path %>
+  
+  <p class="mt-3"><span class="h5">Nombre:</span>&nbsp &nbsp<%= @product.name %></p>
+  <p><span class="h5">Descripción:</span>&nbsp &nbsp<%= @product.description %></p>
+  <p><span class="h5">Valor:</span>&nbsp &nbsp<%= @product.cost %></p>
+  <%= link_to 'Volver', products_path, class: "btn btn-primary" %>
+</div>

@@ -1,8 +1,7 @@
-
 <div class="box">
   <div id="head2">
     <span class="h2">Productos</span>
-    <%= link_to 'Crear', new_product_path, class: "btn btn-primary btn-sm", id: "prueba" %>
+    <%= link_to 'Crear', new_product_path, class: "btn btn-primary btn-sm", id: "btn-right" %>
   </div> 
   <table class="table table-striped mt-3">
     <thead>
@@ -18,7 +17,6 @@
     </thead>
     <tbody>
       <% @products.each do |product| %>
-        
           <tr>
             <td scope="row"><%= product.id %></td>
             <td><%= product.name %></td>

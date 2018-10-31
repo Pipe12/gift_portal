@@ -1,22 +1,23 @@
-<h1>Crear categoria</h1>
+<div class="box">
+  <% if @category.errors.any? %>
+    <div id="errors">
+      <h3>Se tienen <%= @category.errors.count %> error por favor corrigirlos</h3>
+      <ul>
+        <% @category.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<% if @category.errors.any? %>
-  <div id="errors">
-    <h3>Se tienen <%= @category.errors.count %> error por favor corrigirlos</h3>
-    <ul>
-      <% @category.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
+  <div id="head2">
+    <span class="h2">Crear categoria</span> 
   </div>
-<% end %>
-
-<%= form_for @category do |f| %>
-  <p>
-    <%= f.label "Categoria: " %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.submit "Crear" %>
-  </p>
-<% end %>
+  <%= form_for @category, html: { class: "mt-3" } do |f| %>
+    <div class="form-group">
+      <%= f.label "Unidad:" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <%= f.submit "Crear", class: "btn btn-primary" %>
+  <% end %>
+</div>
