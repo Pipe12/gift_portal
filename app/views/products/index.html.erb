@@ -1,30 +1,46 @@
-<h1>Products</h1>
-<%= link_to 'Crear', new_product_path %>
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Descriptión</th>
-      <th>Valor</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.id %></td>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= product.cost %></td>
-        <td><%= link_to 'Editar', edit_product_path(product) %></td>
-        <td><%= link_to 'Ver', product_path(product) %></td>
-        <td><%= link_to 'Eliminar', product_path(product),
-                method: :delete,
-                data: { confirm: 'Esta seguro ?'} %></td>
-      </tr>
-    <%end %>
-  </tbody>
-</table>
+<div class="container first-margin">
+  <div class="box">
+    <div id="head2">
+      <span class="h2">Productos</span>
+      <%= link_to 'Crear', new_product_path, class: "btn btn-primary btn-sm", id: "prueba" %>     
+    </div>
+    <table class="table table-striped mt-3">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Descriptión</th>
+          <th scope="col">Valor</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |product| %>
+          
+            <tr>
+              <td scope="row"><%= product.id %></td>
+              <td><%= product.name %></td>
+              <td><%= product.description %></td>
+              <td><%= product.cost %></td>
+              <td><%= link_to 'Editar', edit_product_path(product) %></td>
+              <td><%= link_to 'ver', product_path(product) %></td>  
+              <td><%= link_to 'Eliminar', product_path(product),
+                      method: :delete,
+                      data: { confirm: 'Esta seguro ?'} %></td>
+            </tr>
+        <%end %>
+      </tbody>
+    </table>  
+  </div>
+
+  <div class="box">
+    <div id="head2">
+      <span class="h2">Productos</span>
+      <%= link_to 'Crear', new_product_path, class: "btn btn-primary btn-sm", id: "prueba" %>     
+    </div>
+
+  </div>
+</div>
+  
