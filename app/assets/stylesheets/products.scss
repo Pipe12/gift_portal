@@ -27,6 +27,7 @@
 #flex1 {
   display:flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 #cost {
@@ -39,6 +40,11 @@
   border: 2px solid #f0f0f0;
   padding: 0px 10px;
   margin-right: 10px;
+}
+
+#action {
+  font-size: 24px;
+  margin-left: 10px;
 }
 
 #action:hover {
