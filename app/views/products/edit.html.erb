@@ -1,3 +1,20 @@
+<% if @product.errors.any? %>
+  <div id="new-alert" class="alert alert-danger alert-dismissible fade show">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div id="errors">
+      <h2>Se tienen <%= @product.errors.count %> error por favor corrigirlos</h2>
+      <hr>
+      <ul>
+        <% @product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
 <div class="box">
   <div id="head2">
     <span class="h2">Editar producto</span>

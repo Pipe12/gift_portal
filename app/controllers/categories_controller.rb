@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
 
     if @category.save
-      redirect_to root_path
+      redirect_to categories_path
     else
       render new_category_path
     end
@@ -27,7 +27,7 @@ class CategoriesController < ApplicationController
     if @category.update(category_params)
       redirect_to categories_path
     else
-      render edit_category_path
+      render 'edit'
     end
   end
 
